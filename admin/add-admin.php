@@ -80,7 +80,7 @@
         {
             // ON DATA INSERTED
             // Creating a session
-            $_SESSION['add'] = "Admin added successfully";
+            $_SESSION['add'] = "<div class='success'>Admin added successfully</div>";
 
             // Redirecting to manage-admin page
             header("location:".SITEURL."admin/manage-admin.php");
@@ -90,7 +90,7 @@
             // FAILED TO INSERT THE DATA
 
             // Creating a session
-            $_SESSION['add'] = "Failed to add Admin";
+            $_SESSION['add'] = "<div class='error'>Failed to add Admin</div>";
 
             // Redirecting to add-admin page
             header("location:".SITEURL.'admin/add-admin.php');

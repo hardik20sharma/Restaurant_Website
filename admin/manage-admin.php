@@ -14,6 +14,18 @@
                     echo $_SESSION['add'];      // Display message showing admin added
                     unset($_SESSION['add']);    // Remove the message
                 }
+
+                if(isset($_SESSION['delete']))
+                {
+                    echo $_SESSION['delete'];       // Display message - admin removed
+                    unset($_SESSION['delete']);     // Remove the message
+                }
+
+                if(isset($_SESSION['update']))
+                {
+                    echo $_SESSION['update'];       // Display message - admin removed
+                    unset($_SESSION['update']);     // Remove the message
+                }
             ?>
 
             <br /><br />
@@ -63,8 +75,8 @@
                                         <td><?php echo $full_name; ?></td>
                                         <td><?php echo $username; ?></td> 
                                         <td>
-                                            <a href="#" class="btn-secondary">Update Admin</a>
-                                            <a href="#" class="btn-danger">Delete Admin</a>
+                                            <a href="update-admin.php?id=<?php echo $id;?>" class="btn-secondary">Update Admin</a>
+                                            <a href="delete-admin.php?id=<?php echo $id;?>" class="btn-danger">Delete Admin</a>
                                         </td>
                                     </tr>
 
