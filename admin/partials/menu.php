@@ -1,3 +1,5 @@
+<?php include('../config/constants.php')?>
+
 <html>
     <head>
         <title>Restaurant - Admin</title>
