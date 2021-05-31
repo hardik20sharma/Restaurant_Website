@@ -103,11 +103,6 @@
                                 <?php
                             }
                         }
-                        else
-                        {
-                            // WE DON'T HAVE DATA IN DATABASE
-                        }
-
                     }
                 ?>
             </table>

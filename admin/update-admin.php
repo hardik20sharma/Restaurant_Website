@@ -8,22 +8,22 @@
 
         <?php
             // 1. Getting the ID of selected Admin
-            $id=$_GET['id'];
+            $id = $_GET['id'];
 
             // 2. Creating SQL Query to get the details
-            $sql="SELECT * FROM tbl_admin WHERE id=$id";
+            $sql = "SELECT * FROM tbl_admin WHERE id=$id";
 
             // 3. Executing the Query
-            $res=mysqli($conn, $sql);
+            $res = mysqli_query($conn, $sql);
 
             // Checking if query is executed or not
             if($res == TRUE)
             {
-                $count=mysqli_num_rows($res);
+                $count = mysqli_num_rows($res);
 
-                if($count==1)       // Only when count is one we update the query, not 0 and not more
+                if($count == 1)       // Only when count is one we update the query, not 0 and not more
                 {
-                    $row=mysqli_fetch_assoc($res);
+                    $row = mysqli_fetch_assoc($res);
 
                     $full_name = $row['full_name'];
                     $username = $row['username'];
