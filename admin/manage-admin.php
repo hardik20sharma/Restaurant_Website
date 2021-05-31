@@ -26,6 +26,24 @@
                     echo $_SESSION['update'];       // Display message - admin removed
                     unset($_SESSION['update']);     // Remove the message
                 }
+
+                if(isset($_SESSION['user-not-found']))
+                {
+                    echo $_SESSION['user-not-found'];       // Display message - admin removed
+                    unset($_SESSION['user-not-found']);     // Remove the message
+                }
+
+                if(isset($_SESSION['pwd-not-match']))
+                {
+                    echo $_SESSION['pwd-not-match'];       // Display message - password did not match
+                    unset($_SESSION['pwd-not-match']);     // Remove the message
+                }
+
+                if(isset($_SESSION['change-pwd']))
+                {
+                    echo $_SESSION['change-pwd'];       // Display message - password changed
+                    unset($_SESSION['change-pwd']);     // Remove the message
+                }
             ?>
 
             <br /><br />
@@ -75,8 +93,10 @@
                                         <td><?php echo $full_name; ?></td>
                                         <td><?php echo $username; ?></td> 
                                         <td>
+                                            <a href="update-password.php?id=<?php echo $id;?>" class="btn-primary">Change Password</a>
                                             <a href="update-admin.php?id=<?php echo $id;?>" class="btn-secondary">Update Admin</a>
                                             <a href="delete-admin.php?id=<?php echo $id;?>" class="btn-danger">Delete Admin</a>
+                                            
                                         </td>
                                     </tr>
 

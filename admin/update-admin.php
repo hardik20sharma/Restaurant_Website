@@ -87,7 +87,7 @@
         }
         else
         {
-            $_SESSION['update'] = "<div class='error'>Failed to update admin"</div>; 
+            $_SESSION['update'] = "<div class='error'>Failed to update admin</div>"; 
 
             header('location:'.SITEURL.'admin/manage-admin.php');
         }
