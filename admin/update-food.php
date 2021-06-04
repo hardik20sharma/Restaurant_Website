@@ -170,16 +170,16 @@
 
                 //2. Upload the image if selected
 
-                //CHeck whether upload button is clicked or not
+                //Check whether upload button is clicked or not
                 if(isset($_FILES['image']['name']))
                 {
-                    //Upload BUtton Clicked
+                    //Upload Button Clicked
                     $image_name = $_FILES['image']['name']; //New Image NAme
 
                     //CHeck whether th file is available or not
                     if($image_name!="")
                     {
-                        //IMage is Available
+                        //Image is Available
                         //A. Uploading New Image
 
                         //REname the Image
@@ -187,14 +187,14 @@
 
                         $image_name = "Food-Name-".rand(0000, 9999).'.'.$ext; //THis will be renamed image
 
-                        //Get the Source Path and DEstination PAth
+                        //Get the Source Path and Destination PAth
                         $src_path = $_FILES['image']['tmp_name']; //Source Path
-                        $dest_path = "../images/food/".$image_name; //DEstination Path
+                        $dest_path = "../images/food/".$image_name; //Destination Path
 
                         //Upload the image
                         $upload = move_uploaded_file($src_path, $dest_path);
 
-                        /// CHeck whether the image is uploaded or not
+                        /// Check whether the image is uploaded or not
                         if($upload==false)
                         {
                             //FAiled to Upload
