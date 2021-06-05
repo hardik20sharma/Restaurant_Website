@@ -173,6 +173,16 @@ fieldset{
 }
 
 
+.error{
+    padding: 2%;
+    color:red;
+}
+
+.success{
+    padding: 2%;
+    color: green;
+}
+
 /* CSS for Social */
 .social ul{
     list-style-type: none;
